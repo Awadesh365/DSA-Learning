@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// This is the representation of a Tree
 struct NODE
 {
     int data;
