@@ -19,6 +19,8 @@ int main()
 
     string *storeAddressPtr2 = &ListOfPeople[0];
 
+    *storeAddressPtr2 = ListOfPeople;
+
     ListOfPeople.push_back("Nancy");          // ListOfPeople->push_back("Nancy"); is wrong
     storeAddressPtr1->push_back("x2324klsd"); //  storeAddress.push_back("x2324klsd"); is wrong in case of Pointer arrary
 
