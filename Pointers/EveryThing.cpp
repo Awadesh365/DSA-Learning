@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     int n = 10;
-    int *addressStore;
+    int *addressStore;   // bad practice instead do this int *addressStore = nullptr; and then do the same next step.
     addressStore = &n;
 
     string test = "Awadesh";
