@@ -17,6 +17,7 @@ int main()
     (ptrA)++; // this will go to next memory space, let say if address was 100 then it will go to 104,
     // since an integer carray 4 bytes in memory, so this poiner will will point to next address location, 
     // and not the 101 it will be 104.
+    // the memory shif will be in the accordance to what type of pointer variable it is.
     //-------------------------------------------------------
 
 
