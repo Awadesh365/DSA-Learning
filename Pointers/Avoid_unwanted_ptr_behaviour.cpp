@@ -39,6 +39,18 @@ int main()
     *ptr = *ptr + 1;
     cout << "Expected value:(38)" << " actual value: " << x << endl; // actual 35
 
+    /*
+        what is i want to only ++ things only, then use braces '()' to wrap that pointer and then perform the 
+        operation
+    eg
+    */
+
+    ++(*ptr);
+    cout << x << endl;   // this will give you correct expected results, since you've wrapped the *ptr inside ()
+
+    (*ptr)++;
+    cout << x << endl; // this will give you correct expected results, since you've wrapped the *ptr inside ()
+
     return 0;
 }
 
@@ -53,5 +65,5 @@ int main()
 
 5. In the 6th case (*ptr = *ptr + 1), the value pointed to by ptr is incremented, but the result is not assigned back to x. Therefore, x remains 35, and the expected and actual values are not the same.
 
-The unwanted behavior in the 6th case is due to not updating the value of x after incrementing the value pointed to by ptr. If you want x to be updated, you should use *ptr = *ptr + 1;
+The unwanted behavior in the 6th case is due to not updating the value of x after incrementing the value pointed to by ptr. If you want x to be updated, you should use *ptr = *ptr + 1  or ++(*ptr)  or (*ptr)++;
 */
