@@ -9,6 +9,17 @@ int main()
     // Declare a pointer variable ptr and store the address of x in it
     int *ptr = &x;
 
+
+    // ------concept of memory shift-----------------
+    int a = 43;
+    int *ptrA = &a;
+
+    (ptrA)++; // this will go to next memory space, let say if address was 100 then it will go to 104,
+    // since an integer carray 4 bytes in memory, so this poiner will will point to next address location, 
+    // and not the 101 it will be 104.
+    //-------------------------------------------------------
+
+
     // Increment the value of x by 1 (post-increment)
     x++;
     cout << "Expected value:(33)" << " actual value: " << x << endl;
