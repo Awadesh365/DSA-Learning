@@ -21,7 +21,7 @@ int main()
 
     *storeAddressPtr2 = ListOfPeople;
 
-    ListOfPeople.push_back("Nancy");          // ListOfPeople->push_back("Nancy"); is wrong
+    ListOfPeople.push_back("Nancy");          // ListOfPeople->push_back("Nancy"); is wrong ( "->" is used for addresses only when it comes to pushing)
     storeAddressPtr1->push_back("x2324klsd"); //  storeAddress.push_back("x2324klsd"); is wrong in case of Pointer arrary
 
     string arrStr[] = {"Liza", "john", "Carly", "christina", "Taylor", "Awadesh"};
