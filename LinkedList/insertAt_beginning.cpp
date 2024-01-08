@@ -1,48 +1,43 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Node of LinkedList
-struct Node
+struct node
 {
     int data;
-    Node *Next;
+    node *next;
 };
 
-// printing the linkedlist
-void printList(Node *head)
+/*
+    Getting headPtr in ** i.e reference to a pointer variable
+*/
+void Insert(int newData, node **headPtr)
 {
-    if (head == NULL)
-        return;
-
-    cout << (head->data) << endl;
-    printList(head->Next);
+    node *temp = new node();
+    temp->data = newData;
+    temp->next = *headPtr;
+    *headPtr = temp;
 }
-void insert_At_beginning(Node **head, int newData)
+
+void Print(node *head)
 {
-    Node *newHead = new Node();
-    newHead->data = newData;
-    newHead->Next = *head;
-    *head = newHead;
+    while (head != NULL)
+    {
+        cout << (head->data) << endl;
+        head = head->next;
+    }
 }
 
 int main()
 {
-    Node *head = new Node();
-    Node *first = new Node();
-    Node *second = new Node();
+    node *head = new node();
+    node *first = new node();
 
-    head->data = 24;
-    head->Next = first;
+    head->data = 23, first->data = 24;
+    head->next = first;
+    first->next = NULL;
 
-    first->data = 25;
-    first->Next = second;
+    Insert(22, &head); // passing reference to head so that we don't need to return it.
+    Print(head);
 
-    second->data = 26;
-    second->Next = NULL;
-
-    int newData = 23;
-    insert_At_beginning(&head, newData);
-
-    printList(head);
     return 0;
 }
