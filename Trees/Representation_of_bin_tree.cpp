@@ -1,14 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// This is the representation of a Tree
-struct NODE
+struct node
 {
     int data;
-    struct NODE *left;
-    struct NODE *right;
+    node *left;
+    node *right;
 
-    NODE(int val)
+    node(int val)
     {
         data = val;
         left = NULL, right = NULL;
@@ -17,9 +16,15 @@ struct NODE
 
 int main()
 {
-    struct NODE *root = new NODE(1);
-    root->left = new NODE(2);
-    root->right = new NODE(3);
-    root->left->right = new NODE(5);
-    root->left->left = new NODE(6);
+    node *root = new node(5);
+
+    root->left = new node(6);
+    root->left->left = new node(8);
+    root->left->right = new node(9);
+    root->left->right->left = new node(10);
+
+    root->right = new node(7);
+    root->right->left = NULL;
+
+    return 0;
 }
