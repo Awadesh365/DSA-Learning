@@ -1,4 +1,6 @@
-.bin
-.exe
-.json
-.vscode
+# Ignore everything except C++ source files and .gitignore itself
+*
+!*.cpp
+!*.h
+!.gitignore
+!.md
