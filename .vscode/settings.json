@@ -21,6 +21,7 @@
     "regex": "cpp",
     "valarray": "cpp",
     "algorithm": "cpp",
-    "complex": "cpp"
+    "complex": "cpp",
+    "cmath": "cpp"
   }
 }
